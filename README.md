@@ -1,2 +1,0 @@
-# OminiFood
-# XXX
