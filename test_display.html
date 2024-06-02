@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- lang specifies the language of element's content
+     en : English
+     es : Spanish -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=width-device, initial-scale=1.0">
+
+	<!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicons/site.webmanifest">
+
+	
+	<!-- google font size -->
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/queries.css">
+
+	<!-- external library CSS -->
+	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+
+
+	<!-- title page -->
+	<title>Group Members</title>
+    
+
+
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Sentence Display</title>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var sentences = ['Sentence 1', 'Sentence 2', 'Sentence 3'];
+            var current_index = 0;
+            var sentenceElement = document.getElementById('sentenceDisplay');
+
+            function updateSentence() {
+                sentenceElement.textContent = sentences[current_index];
+                current_index = (current_index + 1) % sentences.length;
+            }
+
+            updateSentence();  // Update immediately on load
+            setInterval(updateSentence, 3000);  // Update every 3000 milliseconds (3 seconds)
+        });
+    </script> -->
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Sentence Display</title>
+    <style>
+        #sentenceDisplay {
+            font-size: 32px; /* Sets the font size to 32 pixels */
+            font-family: Arial, sans-serif; /* Sets the font style */
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var sentences = ['Sentence 1', 'Sentence 2', 'Sentence 3'];
+            var current_index = 0;
+            var sentenceElement = document.getElementById('sentenceDisplay');
+
+            function updateSentence() {
+                sentenceElement.textContent = sentences[current_index];
+                current_index = (current_index + 1) % sentences.length;
+            }
+
+            updateSentence();  // Update immediately on load
+            setInterval(updateSentence, 3000);  // Update every 3000 milliseconds (3 seconds)
+        });
+    </script>
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+	<header>
+        <nav>
+            <div class="row">
+                <img src="assets/imgs/logonew.png" alt="Cambridge Logo" class="logo">
+                <img src="assets/imgs/logo.png" alt="Cambridge Logo" class="logo-black">
+                <ul class="main-nav js-main-nav">
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="#member">Group Members</a></li>
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="index.html">Publications</a></li>
+                    <li><a href="index.html">Data Sharing</a></li>
+                    <li><a href="index.html">NEWS</a></li>
+                </ul>
+                <a class="mobile-nav-icon js-nav-icon"><ion-icon name="menu-outline"></ion-icon></a>
+            </div>
+        </nav>
+		<div class="hero-text-box">
+			<h1>Spatial Planning<br>Urban Modelling<br>Data Analytics<br>Digital Cities</h1>
+			<br>
+			<h5>An interdisciplinary research group at Department of Land Economy, University of Cambridge</h5>
+		</div>
+	</header>
+
+
+
+	<section class="section-project" id="project">		
+		<div class="row">
+			<h2>What are people saying</h2>
+		</div>
+<br>
+<br>
+	<section class="section-project" id="project">		
+		<div class="row">
+			<h1>Automated Sentence Display</h1>
+			<p id="sentenceDisplay"></p>
+		</div>
+
+       		<!-- <div class="row">
+			<div class="col span-1-of-3 box">
+				<figure>
+					<img src="assets/imgs/crassh_event.png" alt="Dr. Li Wan">
+				</figure>
+			</div>
+			<div class="col span-2-of-3 box">
+				<a href="https://forms.gle/fVoDNHa7VP3teW3R6"><h3>WHAT DOES IT MEAN FOR A CITY TO GROW</h3></a>
+				<h4>Public Event: 4 June 2024</h4>
+				<p style="text-align:justify;">As academics interested in urban development and also Cambridge residents, witnessing this question unfold in our daily lives we realised the word growth means different things to different people. For some people it is largely positive and growth brings opportunities for homes wealth and to solve existing problems cities like Cambridge face. But growth can also be threatening, much loved places change their character, environments can be damaged and what opportunities are created are not shared by everyone.</p>
+				<p>&nbsp</p>
+				<p style="text-align:justify;">Being academics we decided to hold a conference but we wanted to get voices of people with different opinions on what growth means for the city. More importantly we want people to tell us what growth means to them. We decided to use a survey to get as may opinions as possible and then we will invite speakers to respond. </p>
+				<p>&nbsp</p>
+				<a href="https://forms.gle/fVoDNHa7VP3teW3R6">Click the link to share your thoughts : )</a>
+				<p>&nbsp</p>
+				<p style="text-align:justify;"><b>Survey Infomation: </b>This is not a consultation. We want to open up the conversation about the growth of Cambridge and what it means so we would be really grateful if you could take a few minutes to think about the following questions and share your thoughts with us. The more you can write the more it helps us understand what growth means to you, you can write in any language, formal or informal, or use block capitals with exclamation marks, or even a poem. All the data will be processed by using content analysis and text mining methods with the goal of understanding how people’s views on what growth means vary.</p>
+				<!-- <font color="orange"></font> -->
+				<!-- <p>&nbsp</p>
+				<p style="text-align:justify;"><b>Data Statement: </b>Data collected in this questionnaire is solely for academic use and will be securely stored by the event convenors. By proceeding, you agree to these data collection and storage practices. Should you wish to withdraw the information you’ve shared or have data-related concerns in the future, please contact Dr Li Wan (lw423@cam.ac.uk). </p>
+				<p>&nbsp</p>
+				<p style="text-align:justify;"><b>One-day Public Event</b> will be held on 4 June 2024 at Uni of Cambridge. This event would feature talks by both experts in academia and influential policy makers, addressing various aspects of Cambridge's growth. If you're interested, we would be delighted to send you an invitation to join us.</p>
+				<p>&nbsp</p>
+				<p style="text-align:justify;">This survey will take approximately 15 minutes of your time. You can contribute to the following questions anonymously. </p>
+				<p>&nbsp</p>
+				<p>Thank you for taking part and we really value your contribution to the conversation.</p>
+				<p>Cambridge & UCL Team</p>
+				 -->
+			</div>
+		</div>
+<br>
+<br>
+<br>
+<br>
+<br> -->
+
+    
+    <!-- JQuery   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Icon   -->
+	<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!--https://www.jsdelivr.com/?docs=gh-->
+    <!-- to make the webpage more responsive -->
+	<script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5@1.0.5/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/selective-whitespace@1.0.4/index.min.js"></script>
+    <!-- Waypoints triggers a function when scrolling to an element -->
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
