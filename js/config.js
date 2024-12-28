@@ -345,21 +345,20 @@ var config = {
         rotateAnimation: false,
         callback: "",
         onChapterEnter: [
-            {layer: "your_line_layer",opacity: 0,duration: 300,},
-            {layer: "your_points_layer",opacity: 1,duration: 300,},
+            {layer: "your_line_layer",opacity: 1,duration: 300,},
+            {layer: "your_points_layer",opacity: 0,duration: 300,},
             {layer: "your_polygons_layer",opacity: 0,duration: 300,},
         ],
         onChapterExit: [
-            {layer: "your_line_layer",opacity: 0,duration: 300,},
-            {layer: "your_points_layer",opacity: 1,duration: 300,},
+            {layer: "your_line_layer",opacity: 1,duration: 300,},
+            {layer: "your_points_layer",opacity: 0,duration: 300,},
             {layer: "your_polygons_layer",opacity: 0,duration: 300,},
         ],
         },
 
 
 
-
-        // CHAPTER 2_1
+        // CHAPTER 2-1
         // ################################################################
         {
           id: "view2_1",
@@ -371,8 +370,7 @@ var config = {
           chapterDiv: divChapter2_1,
           location: {
             center: [116.383331, 39.916668],
-            //   center: [103.723416, 1.332541], // zoom here!
-            // center: [126.199997, 43.700001], 
+            // [2.5, 52.489471], 
             zoom: 5,
             zoomSmall: 5,
             pitch: 0,
@@ -382,88 +380,90 @@ var config = {
           rotateAnimation: false,
           callback: "",
           onChapterEnter: [
-              {layer: "your_line_layer",opacity: 0,duration: 300,},
-              {layer: "your_points_layer",opacity: 1,duration: 300,},
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
               {layer: "your_polygons_layer",opacity: 0,duration: 300,},
           ],
           onChapterExit: [
-              {layer: "your_line_layer",opacity: 0,duration: 300,},
-              {layer: "your_points_layer",opacity: 1,duration: 300,},
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
               {layer: "your_polygons_layer",opacity: 0,duration: 300,},
           ],
           },
 
+          
 
 
-
-        // CHAPTER 2_2
+        // CHAPTER 2-2
         // ################################################################
         {
-            id: "view3",
-            alignment: "left",
-            hidden: false,
-            title: "",
-            image: "",
-            description: "",
-            chapterDiv: divChapter2_2,
-            location: {
-            //   center: [103.845436, 1.369115], 
-              // center: [126.199997, 43.700001], // zoom here!
-              center: [116.383331, 39.916668],
-              zoom: 5,
-              zoomSmall: 5,
-              pitch: 0,
-              bearing: 0,
-            },
-            mapAnimation: "flyTo",
-            rotateAnimation: false,
-            callback: "",
-            onChapterEnter: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
-                {layer: "your_points_layer",opacity: 0,duration: 300,},
-                {layer: "your_polygons_layer",opacity: 1,duration: 300,},
-            ],
-            onChapterExit: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
-                {layer: "your_points_layer",opacity: 0,duration: 300,},
-                {layer: "your_polygons_layer",opacity: 1,duration: 300,},
-            ],
+          id: "view2_2",
+          alignment: "left",
+          hidden: false,
+          title: "",
+          image: "",
+          description: "",
+          chapterDiv: divChapter2_2,
+          location: {
+            center: [116.383331, 39.916668],
+            // [2.5, 52.489471], 
+            zoom: 5,
+            zoomSmall: 5,
+            pitch: 0,
+            bearing: 0,
           },
-        
+          mapAnimation: "flyTo",
+          rotateAnimation: false,
+          callback: "",
+          onChapterEnter: [
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
+              {layer: "your_polygons_layer",opacity: 0,duration: 300,},
+          ],
+          onChapterExit: [
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
+              {layer: "your_polygons_layer",opacity: 0,duration: 300,},
+          ],
+          },
 
-        // CHAPTER 2_3
+          
+
+
+
+        // CHAPTER 2-3
         // ################################################################
         {
-            id: "view4",
-            alignment: "left",
-            hidden: false,
-            title: "",
-            image: "",
-            description: "",
-            chapterDiv: divChapter2_3,
-            location: {
-            //   center: [103.845436, 1.369115], 
-              center: [113.253250, 23.128994], // zoom here!
-              zoom: 5.5,
-              zoomSmall: 5.5,
-              pitch: 0,
-              bearing: 0,
-            },
-            mapAnimation: "flyTo",
-            rotateAnimation: false,
-            callback: "",
-            onChapterEnter: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
-                {layer: "your_points_layer",opacity: 0,duration: 300,},
-                {layer: "your_polygons_layer",opacity: 1,duration: 300,},
-            ],
-            onChapterExit: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
-                {layer: "your_points_layer",opacity: 0,duration: 300,},
-                {layer: "your_polygons_layer",opacity: 1,duration: 300,},
-            ],
+          id: "view2_3",
+          alignment: "left",
+          hidden: false,
+          title: "",
+          image: "",
+          description: "",
+          chapterDiv: divChapter2_3,
+          location: {
+            center: [113.253250, 23.128994],
+            // [2.5, 52.489471], 
+            zoom: 5,
+            zoomSmall: 5,
+            pitch: 0,
+            bearing: 0,
           },
-
+          mapAnimation: "flyTo",
+          rotateAnimation: false,
+          callback: "",
+          onChapterEnter: [
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
+              {layer: "your_polygons_layer",opacity: 0,duration: 300,},
+          ],
+          onChapterExit: [
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
+              {layer: "your_polygons_layer",opacity: 0,duration: 300,},
+          ],
+          },
+  
 
 
 
@@ -479,7 +479,7 @@ var config = {
           description: "",
           chapterDiv: divChapter3,
           location: {
-            center: [2.5, 52.489471], 
+            center: [113.253250, 23.128994], 
             zoom: 5,
             zoomSmall: 5,
             pitch: 0,
@@ -489,13 +489,13 @@ var config = {
           rotateAnimation: false,
           callback: "",
           onChapterEnter: [
-              {layer: "your_line_layer",opacity: 0,duration: 300,},
-              {layer: "your_points_layer",opacity: 1,duration: 300,},
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
               {layer: "your_polygons_layer",opacity: 0,duration: 300,},
           ],
           onChapterExit: [
-              {layer: "your_line_layer",opacity: 0,duration: 300,},
-              {layer: "your_points_layer",opacity: 1,duration: 300,},
+              {layer: "your_line_layer",opacity: 1,duration: 300,},
+              {layer: "your_points_layer",opacity: 0,duration: 300,},
               {layer: "your_polygons_layer",opacity: 0,duration: 300,},
           ],
           },
@@ -526,13 +526,13 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
-                {layer: "your_points_layer",opacity: 1,duration: 300,},
+                {layer: "your_line_layer",opacity: 1,duration: 300,},
+                {layer: "your_points_layer",opacity: 0,duration: 300,},
                 {layer: "your_polygons_layer",opacity: 0,duration: 300,},
             ],
             onChapterExit: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
-                {layer: "your_points_layer",opacity: 1,duration: 300,},
+                {layer: "your_line_layer",opacity: 1,duration: 300,},
+                {layer: "your_points_layer",opacity: 0,duration: 300,},
                 {layer: "your_polygons_layer",opacity: 0,duration: 300,},
             ],
             },
@@ -563,14 +563,14 @@ var config = {
               rotateAnimation: false,
               callback: "",
               onChapterEnter: [
-                  {layer: "your_line_layer",opacity: 0,duration: 300,},
+                  {layer: "your_line_layer",opacity: 1,duration: 300,},
                   {layer: "your_points_layer",opacity: 0,duration: 300,},
-                  {layer: "your_polygons_layer",opacity: 1,duration: 300,},
+                  {layer: "your_polygons_layer",opacity: 0,duration: 300,},
               ],
               onChapterExit: [
-                  {layer: "your_line_layer",opacity: 0,duration: 300,},
+                  {layer: "your_line_layer",opacity: 1,duration: 300,},
                   {layer: "your_points_layer",opacity: 0,duration: 300,},
-                  {layer: "your_polygons_layer",opacity: 1,duration: 300,},
+                  {layer: "your_polygons_layer",opacity: 0,duration: 300,},
               ],
             },
           
@@ -597,14 +597,14 @@ var config = {
               rotateAnimation: false,
               callback: "",
               onChapterEnter: [
-                  {layer: "your_line_layer",opacity: 0,duration: 300,},
+                  {layer: "your_line_layer",opacity: 1,duration: 300,},
                   {layer: "your_points_layer",opacity: 0,duration: 300,},
-                  {layer: "your_polygons_layer",opacity: 1,duration: 300,},
+                  {layer: "your_polygons_layer",opacity: 0,duration: 300,},
               ],
               onChapterExit: [
-                  {layer: "your_line_layer",opacity: 0,duration: 300,},
+                  {layer: "your_line_layer",opacity: 1,duration: 300,},
                   {layer: "your_points_layer",opacity: 0,duration: 300,},
-                  {layer: "your_polygons_layer",opacity: 1,duration: 300,},
+                  {layer: "your_polygons_layer",opacity: 0,duration: 300,},
               ],
             },          
 
@@ -631,14 +631,14 @@ var config = {
             rotateAnimation: false,
             callback: "",
             onChapterEnter: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
+                {layer: "your_line_layer",opacity: 1,duration: 300,},
                 {layer: "your_points_layer",opacity: 0,duration: 300,},
-                {layer: "your_polygons_layer",opacity: 1,duration: 300,},
+                {layer: "your_polygons_layer",opacity: 0,duration: 300,},
             ],
             onChapterExit: [
-                {layer: "your_line_layer",opacity: 0,duration: 300,},
+                {layer: "your_line_layer",opacity: 1,duration: 300,},
                 {layer: "your_points_layer",opacity: 0,duration: 300,},
-                {layer: "your_polygons_layer",opacity: 1,duration: 300,},
+                {layer: "your_polygons_layer",opacity: 0,duration: 300,},
             ],
           },
         
