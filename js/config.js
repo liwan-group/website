@@ -32,7 +32,7 @@ CHAPTERS
 */
 
 let divChapter0 =`
-<h3 style="text-align:center; font-size:25px"> 1. What would happen when a city fail financially?</h3>
+<h3 style="text-align:center; font-size:25px"> 1. What would happen when a city fails financially?</h3>
 `;
 
 let divChapter1 =`
