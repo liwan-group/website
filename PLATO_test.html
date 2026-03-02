@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambridge LSOA Explorer — Welcome</title>
+  <style>
+    /* ── Base ──────────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* ── Header ────────────────────────────────────────────────────────────── */
+    .header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .header .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #6c7086;
+      margin-bottom: 18px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: #cdd6f4;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .header h1 span {
+      color: #cba6f7;
+    }
+
+    .header .subtitle {
+      font-size: 15px;
+      color: #a6adc8;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── User cards ────────────────────────────────────────────────────────── */
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .card {
+      background: #181825;
+      border: 1px solid #313244;
+      border-radius: 14px;
+      padding: 32px 28px 28px;
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: border-color .2s, transform .18s, box-shadow .2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.5);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    /* Per-card accent colours */
+    .card.developers { --accent: #89b4fa; }
+    .card.residents  { --accent: #a6e3a1; }
+    .card.planners   { --accent: #f5c2e7; }
+
+    .card.developers:hover { box-shadow: 0 12px 32px rgba(137,180,250,.15); }
+    .card.residents:hover  { box-shadow: 0 12px 32px rgba(166,227,161,.15); }
+    .card.planners:hover   { box-shadow: 0 12px 32px rgba(245,194,231,.15); }
+
+    .card-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .card-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #cdd6f4;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #6c7086;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 22px;
+      padding: 8px 18px;
+      background: #313244;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      transition: background .15s;
+    }
+
+    .card:hover .card-cta {
+      background: #45475a;
+    }
+
+    /* ── Footer note ───────────────────────────────────────────────────────── */
+    .footer {
+      margin-top: 52px;
+      text-align: center;
+      font-size: 10px;
+      color: #45475a;
+      line-height: 1.7;
+    }
+
+    .footer a {
+      color: #585b70;
+      text-decoration: none;
+    }
+
+    .footer a:hover { color: #89b4fa; }
+
+    /* ── Responsive ────────────────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .header h1 { font-size: 26px; }
+      .card { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ───────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <p class="eyebrow">Cambridge LSOA Explorer &middot; v4</p>
+    <h1>Hi, how can I <span>help you</span> today?</h1>
+    <p class="subtitle">
+      Explore neighbourhood-level data across 78 LSOAs in Cambridge City —
+      housing, demographics, amenities, SWOT analysis and future policy plans.
+    </p>
+  </header>
+
+  <!-- ── User type cards ──────────────────────────────────────────────────── -->
+  <div class="cards">
+
+    <!-- Developers -->
+    <a class="card developers" href="cambridge_map_v4.html">
+      <div class="card-icon">&#x1F3D7;&#xFE0F;</div>
+      <div class="card-label">I am a</div>
+      <div class="card-title">Developer</div>
+      <p class="card-desc">
+        Identify development opportunities, explore housing price trends,
+        owner-occupation rates and SWOT profiles across Cambridge neighbourhoods.
+      </p>
+      <span class="card-cta">Explore the map &#x2192;</span>
+    </a>
+
+    <!-- Residents -->
+    <a class="card residents" href="cambridge_map_v4.html">
+      <div class="card-icon">&#x1F3D8;&#xFE0F;</div>
+      <div class="card-label">I am a</div>
+      <div class="card-title">Resident</div>
+      <p class="card-desc">
+        Understand your neighbourhood — green space, air quality, health services,
+        population trends and what the Local Plan means for where you live.
+      </p>
+      <span class="card-cta">Explore the map &#x2192;</span>
+    </a>
+
+    <!-- Planners / Local Councils -->
+    <a class="card planners" href="cambridge_map_v4.html">
+      <div class="card-icon">&#x1F3DB;&#xFE0F;</div>
+      <div class="card-label">I am a</div>
+      <div class="card-title">Planner / Council</div>
+      <p class="card-desc">
+        Analyse LSOA-level indicators, deprivation, employment and education data
+        to support evidence-based policy decisions under the Greater Cambridge Local Plan.
+      </p>
+      <span class="card-cta">Explore the map &#x2192;</span>
+    </a>
+
+  </div>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>
+      Data: Census 2021 &middot; AHAH v5 &middot; Land Registry Price Paid 2015&ndash;2024
+      &middot; ONS SAPE &middot; <a href="https://consultations.greatercambridgeplanning.org/" target="_blank">Greater Cambridge Local Plan (Draft 2025)</a>
+    </p>
+    <p style="margin-top:4px">78 LSOAs &middot; Cambridge City Council area</p>
+  </footer>
+
+</body>
+</html>
