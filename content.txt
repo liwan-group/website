@@ -1,0 +1,51 @@
+# City-PLATO Website Content
+# Edit the values below to update the website text.
+# Format: KEY = Value  (do not change the KEY names)
+# Lines starting with # are comments and are ignored.
+
+# ── NAV ──────────────────────────────────────────────────────────────────────
+NAV_BRAND = City-PLATO
+NAV_LINK_MISSION = Mission
+NAV_LINK_SOLUTIONS = Solutions
+NAV_LINK_ABOUT = About
+NAV_LINK_FEEDBACK = Feedback
+
+# ── HERO SECTION ─────────────────────────────────────────────────────────────
+HERO_NAME = City-PLATO
+HERO_TAGLINE = Platform for Land‑use Analysis and Transparent Outcomes
+HERO_DESCRIPTION = City-PLATO is a AI-enabled planning intelligence platform that brings together developers, local planning authorities, and residents — making land-use planning more transparent, efficient, and participatory.
+HERO_CTA = Learn More
+
+# ── MISSION SECTION ──────────────────────────────────────────────────────────
+MISSION_HEADING = Our Mission
+MISSION_BODY = We believe that great cities are built through collaboration. City-PLATO exists to bridge the gap between planning professionals, decision-makers, and the communities they serve. By combining cutting-edge AI analysis with open community feedback, we make planning processes legible and accessible to everyone — so that land-use decisions reflect the needs of all stakeholders, not just a few.
+
+# ── SOLUTIONS SECTION ────────────────────────────────────────────────────────
+SOLUTIONS_HEADING = What We Build
+SOLUTIONS_SUBHEADING = One platform, three powerful perspectives.
+
+SOLUTION_1_TITLE = For Developers
+SOLUTION_1_BODY = Streamline pre-application preparation with AI-assisted document analysis. Identify promising development opportunities and gain land-valuation insights — faster and with greater confidence.
+
+SOLUTION_2_TITLE = For Planning Authorities
+SOLUTION_2_BODY = Augment limited internal capacity with AI-assisted early-stage planning discussions and spatial analysis. Identify optimal residential, commercial, and mixed-use zones to guide sustainable growth.
+
+SOLUTION_3_TITLE = For Communities
+SOLUTION_3_BODY = Discover what is being planned in your neighbourhood, share your views, and make your voice count. Optionally allow your feedback to inform future planning decisions — planning democracy made real.
+
+# ── ABOUT & CONTACT SECTION ──────────────────────────────────────────────────
+ABOUT_HEADING = About Us
+ABOUT_BODY = City-PLATO is an early-stage venture founded by a team passionate about urban planning, technology, and civic engagement. We are building the tools needed to make planning processes work better for everyone.
+CONTACT_HEADING = Get in Touch
+CONTACT_EMAIL = hello@city-plato.com
+CONTACT_LOCATION = London, United Kingdom
+
+# ── FEEDBACK SECTION ─────────────────────────────────────────────────────────
+FEEDBACK_HEADING = Help Us Improve
+FEEDBACK_INTRO = City-PLATO is in its earliest stages of development. As we grow, we want to learn from you. Please tell us how we can better meet your needs.
+FEEDBACK_PLACEHOLDER = Share your thoughts, ideas, or needs with us…
+FEEDBACK_BUTTON = Leave Feedback
+FEEDBACK_SUCCESS = Thank you for your feedback! We will be in touch.
+
+# ── FOOTER ───────────────────────────────────────────────────────────────────
+FOOTER_TEXT = © 2026 City-PLATO. All rights reserved.

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ============================================================
+    City-PLATO Landing Page
+    ============================================================
+    HOW TO EDIT THIS PAGE
+    ─────────────────────
+    • To change TEXT content:  find the element with the relevant
+                               data-content="KEY" attribute and edit
+                               its text directly. The same KEY in
+                               content.txt is kept in sync for reference.
+    • To change LAYOUT:        edit the HTML structure below
+    • To change STYLES:        edit the <style> section below
+    • To change BEHAVIOUR:     edit the <script> section at the bottom
+    ============================================================
+  -->
+  <title>City-PLATO — AI-Enabled Planning Intelligence for Smarter Cities</title>
+
+  <!-- ── STYLES ─────────────────────────────────────────────────────────── -->
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --clr-primary:   #3b82f6;   /* bright blue — readable on dark */
+      --clr-primary-d: #2563eb;   /* hover */
+      --clr-accent:    #0ea5e9;   /* cyan accent */
+      --clr-bg:        #0d1526;   /* darkest navy — page base */
+      --clr-surface:   #111d35;   /* slightly lighter for alternate sections */
+      --clr-card:      #162240;   /* card / box backgrounds */
+      --clr-text:      #e2e8f0;   /* near-white body text */
+      --clr-muted:     #94a3b8;   /* secondary text */
+      --clr-border:    #1e3a5f;   /* subtle dark-blue borders */
+      --radius:        0.75rem;
+      --shadow:        0 4px 24px rgba(0,0,0,.4);
+      --max-w:         1100px;
+      --section-pad:   5rem 1.5rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: #0d1526;      /* prevents white flash before CSS loads */
+      color-scheme: dark;       /* tells browser to expect a dark page */
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.7;
+    }
+
+    /* ── Utility ── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
+    .section   { padding: var(--section-pad); }
+    .section-label {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: .5rem;
+    }
+    h2.section-title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .section-sub {
+      color: var(--clr-muted);
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 21, 38, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 100px;
+    }
+    .nav-brand {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo {
+      height: 88px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: screen;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--clr-muted);
+      font-weight: 500;
+      font-size: .9rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    /* ── Hero ── */
+    #hero {
+      background: radial-gradient(ellipse at 70% 50%, #1e4d8c 0%, #0d1526 60%);
+      color: #fff;
+      padding: 4rem 1.5rem 5rem;
+      text-align: center;
+    }
+    .hero-logo {
+      width: min(600px, 70vw);
+      height: auto;
+      object-fit: contain;
+      margin-top: 4rem;
+      margin-bottom: 0;
+      mix-blend-mode: screen;
+    }
+    .hero-name {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      margin-bottom: .5rem;
+    }
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      font-weight: 500;
+      color: #93c5fd;
+      margin-bottom: 1.5rem;
+    }
+    .hero-desc {
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: .75rem 2rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary {
+      background: var(--clr-primary);
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover { background: var(--clr-primary-d); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,.5);
+    }
+    .btn-outline:hover { border-color: #fff; transform: translateY(-1px); }
+
+    /* ── Mission ── */
+    #mission { background: var(--clr-surface); }
+    .mission-body {
+      max-width: 720px;
+      font-size: 1.1rem;
+      color: var(--clr-muted);
+      line-height: 1.85;
+    }
+
+    /* ── Solutions ── */
+    #solutions { background: var(--clr-bg); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.5);
+      border-color: var(--clr-accent);
+    }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .card-icon.dev   { background: rgba(59,130,246,.2); }
+    .card-icon.plan  { background: rgba(34,197,94,.15); }
+    .card-icon.comm  { background: rgba(234,179,8,.15); }
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: .6rem;
+      color: #fff;
+    }
+    .card p { color: var(--clr-muted); font-size: .95rem; }
+
+    /* ── About & Contact ── */
+    #about { background: var(--clr-surface); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: .75rem;
+      color: var(--clr-muted);
+    }
+    .contact-icon { font-size: 1.1rem; }
+    .contact-item a { color: var(--clr-accent); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* ── Feedback ── */
+    #feedback { background: var(--clr-bg); }
+    .feedback-box {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      max-width: 680px;
+      box-shadow: var(--shadow);
+    }
+    .feedback-intro {
+      color: var(--clr-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .feedback-form textarea {
+      width: 100%;
+      min-height: 130px;
+      border: 1px solid var(--clr-border);
+      border-radius: .5rem;
+      padding: .85rem 1rem;
+      font-family: inherit;
+      font-size: .95rem;
+      color: var(--clr-text);
+      background: var(--clr-bg);
+      resize: vertical;
+      transition: border-color .2s;
+      outline: none;
+    }
+    .feedback-form textarea::placeholder { color: #4a6080; }
+    .feedback-form textarea:focus { border-color: var(--clr-accent); }
+    .feedback-form .btn-primary { margin-top: 1rem; }
+    .feedback-success {
+      display: none;
+      margin-top: 1rem;
+      padding: .75rem 1rem;
+      border-radius: .5rem;
+      background: rgba(34,197,94,.15);
+      border: 1px solid rgba(34,197,94,.3);
+      color: #86efac;
+      font-weight: 500;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #080f1c;
+      color: #475569;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: .875rem;
+      border-top: 1px solid var(--clr-border);
+    }
+
+    /* ── Responsive nav ── */
+    @media (max-width: 600px) {
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: .8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       NAVIGATION
+       To change link text: edit NAV_LINK_* keys in content.txt
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/imgs/nav_logo.png" alt="City-PLATO" class="nav-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#mission"   data-content="NAV_LINK_MISSION">Mission</a></li>
+        <li><a href="#solutions" data-content="NAV_LINK_SOLUTIONS">Solutions</a></li>
+        <li><a href="#about"     data-content="NAV_LINK_ABOUT">About</a></li>
+        <li><a href="#feedback"  data-content="NAV_LINK_FEEDBACK">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       HERO SECTION
+       To change: edit HERO_* keys in content.txt
+       Logo path: /assets/imgs/logo.png (replace the file to update the logo)
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="container">
+      <img src="assets/imgs/hero_logo.png" alt="City-PLATO logo" class="hero-logo" />
+      <h1 class="hero-name"    data-content="HERO_NAME">City-PLATO</h1>
+      <p  class="hero-tagline" data-content="HERO_TAGLINE">Platform for Land‑use Analysis and Transparent Outcomes</p>
+      <p  class="hero-desc"    data-content="HERO_DESCRIPTION">City-PLATO is a AI-enabled planning intelligence platform that brings together developers, local planning authorities, and residents — making land-use planning more transparent, efficient, and participatory.</p>
+      <a href="#mission" class="btn btn-outline" data-content="HERO_CTA">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       MISSION SECTION
+       To change: edit MISSION_* keys in content.txt
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="mission" class="section">
+    <div class="container">
+      <span class="section-label">Why we exist</span>
+      <h2 class="section-title" data-content="MISSION_HEADING">Our Mission</h2>
+      <p class="mission-body"   data-content="MISSION_BODY">We believe that great cities are built through collaboration. City-PLATO exists to bridge the gap between planning professionals, decision-makers, and the communities they serve. By combining cutting-edge AI analysis with open community feedback, we make planning processes legible and accessible to everyone — so that land-use decisions reflect the needs of all stakeholders, not just a few.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SOLUTIONS SECTION
+       To change card content: edit SOLUTION_* keys in content.txt
+       To add/remove cards: duplicate or delete a .card div below
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="solutions" class="section">
+    <div class="container">
+      <span class="section-label">Platform</span>
+      <h2 class="section-title" data-content="SOLUTIONS_HEADING">What We Build</h2>
+      <p class="section-sub"    data-content="SOLUTIONS_SUBHEADING">One platform, three powerful perspectives.</p>
+      <div class="cards">
+
+        <!-- Card 1: Developers -->
+        <div class="card">
+          <div class="card-icon dev">🏗️</div>
+          <h3 data-content="SOLUTION_1_TITLE">For Developers</h3>
+          <p  data-content="SOLUTION_1_BODY">Streamline pre-application preparation with AI-assisted document analysis. Identify promising development opportunities and gain land-valuation insights — faster and with greater confidence.</p>
+        </div>
+
+        <!-- Card 2: Planning Authorities -->
+        <div class="card">
+          <div class="card-icon plan">🏛️</div>
+          <h3 data-content="SOLUTION_2_TITLE">For Planning Authorities</h3>
+          <p  data-content="SOLUTION_2_BODY">Augment limited internal capacity with AI-assisted early-stage planning discussions and spatial analysis. Identify optimal residential, commercial, and mixed-use zones to guide sustainable growth.</p>
+        </div>
+
+        <!-- Card 3: Communities -->
+        <div class="card">
+          <div class="card-icon comm">🏘️</div>
+          <h3 data-content="SOLUTION_3_TITLE">For Communities</h3>
+          <p  data-content="SOLUTION_3_BODY">Discover what is being planned in your neighbourhood, share your views, and make your voice count. Optionally allow your feedback to inform future planning decisions — planning democracy made real.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       ABOUT & CONTACT SECTION
+       To change: edit ABOUT_* and CONTACT_* keys in content.txt
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+
+        <div>
+          <span class="section-label">Who we are</span>
+          <h2 class="section-title" data-content="ABOUT_HEADING">About Us</h2>
+          <p class="about-body" data-content="ABOUT_BODY">City-PLATO is an early-stage venture founded by a team passionate about urban planning, technology, and civic engagement. We are building the tools needed to make planning processes work better for everyone.</p>
+        </div>
+
+        <div>
+          <span class="section-label">Say hello</span>
+          <h2 class="section-title" data-content="CONTACT_HEADING">Get in Touch</h2>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <a href="mailto:hello@city-plato.com" id="contact-email" data-content="CONTACT_EMAIL">hello@city-plato.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span data-content="CONTACT_LOCATION">London, United Kingdom</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       FEEDBACK SECTION
+       To change: edit FEEDBACK_* keys in content.txt
+       The form currently shows a success message on submit.
+       To wire it to a real backend, replace the form submit handler
+       in the <script> section below.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="feedback" class="section">
+    <div class="container">
+      <span class="section-label">Early Access</span>
+      <h2 class="section-title" data-content="FEEDBACK_HEADING">Help Us Improve</h2>
+      <div class="feedback-box">
+        <p class="feedback-intro" data-content="FEEDBACK_INTRO">City-PLATO is in its earliest stages of development. As we grow, we want to learn from you. Please tell us how we can better meet your needs.</p>
+        <form class="feedback-form" id="feedback-form" novalidate>
+          <textarea id="feedback-text" placeholder="Share your thoughts, ideas, or needs with us…"></textarea>
+          <br />
+          <button type="submit" class="btn btn-primary" data-content="FEEDBACK_BUTTON">Leave Feedback</button>
+        </form>
+        <div class="feedback-success" id="feedback-success" data-content="FEEDBACK_SUCCESS">
+          Thank you for your feedback!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       FOOTER
+       To change: edit FOOTER_TEXT key in content.txt
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <footer>
+    <p data-content="FOOTER_TEXT">© 2026 City-PLATO. All rights reserved.</p>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ─────────────────────────────────────────────────────────────────────
+       This script:
+         1. Fetches content.txt
+         2. Parses each "KEY = Value" line into a dictionary
+         3. Injects values into elements with data-content="KEY"
+         4. Handles the feedback form submit
+       ─────────────────────────────────────────────────────────────────────
+       To wire feedback to a real endpoint: replace the submitFeedback()
+       function with a fetch() call to your API.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <script>
+    // ── Load content.txt and inject into the page ──────────────────────────
+    // Requires the page to be served via a local server (not opened as a file).
+    // Run: python3 -m http.server 8080  then open http://localhost:8080
+    async function loadContent() {
+      try {
+        const res  = await fetch('content.txt');
+        if (!res.ok) return;
+        const text = await res.text();
+        const data = {};
+        text.split('\n').forEach(line => {
+          if (!line.trim() || line.trim().startsWith('#')) return;
+          const idx = line.indexOf('=');
+          if (idx === -1) return;
+          const key = line.slice(0, idx).trim();
+          const val = line.slice(idx + 1).trim();
+          if (key) data[key] = val;
+        });
+        // Inject text into elements with matching data-content attribute
+        document.querySelectorAll('[data-content]').forEach(el => {
+          const val = data[el.getAttribute('data-content')];
+          if (val !== undefined) el.textContent = val;
+        });
+        // Wire contact email href
+        const emailEl = document.getElementById('contact-email');
+        if (emailEl && data['CONTACT_EMAIL']) {
+          emailEl.href = 'mailto:' + data['CONTACT_EMAIL'];
+        }
+      } catch (e) {
+        // Silently fall back to hardcoded HTML text
+      }
+    }
+    loadContent();
+
+    // ── Feedback form handler ──────────────────────────────────────────────
+    document.getElementById('feedback-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const text = document.getElementById('feedback-text').value.trim();
+      if (!text) return;
+      console.log('Feedback submitted:', text);
+      this.style.display = 'none';
+      document.getElementById('feedback-success').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
