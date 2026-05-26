@@ -138,48 +138,99 @@
 				.div-d{ float:right;width:33.33%;border:0px solid #000}
 				.div-m{ display:inline-block;width: 33.333%;border:0px solid #000}
 				</style> 
-			<h2>Alumni</h2>
-			<div class="div-c">
-			<!-- <a href="qiancheng.html"> -->
-			<!-- <p class="p-long"><u>Dr. Qiancheng Wang</u> (PhD awarded)</p></a>    -->
-			<p class="p-long">Dr. Qiancheng Wang</u> (PhD)</p></a>    
-			<!-- <h4 class="p-long">#Transport #Mobility</h4> -->
-			<br>
-			<!-- <a href="shantong.html"> -->
-			<p class="p-long">Dr. Shantong Wang</u> (PhD)</p></a>     
-			<!-- <h4 class="p-long">#Transport #Mobility</h4> -->
-			<br>
-			<!-- <a href="zihao.html"> -->
-			<p class="p-long">Dr. Zihao An</u> (Research Associate)</p></a>     
-			<!-- <h4 class="p-long">#Transport #Mobility</h4> -->
-			<br></div>
+			
+			<details>
+				<summary class="alumni-toggle">
+				<span><h2>Alumni</h2></span>
+				<span class="icon"></span>
+				</summary>
 
-			<div class="div-m">
-			<!-- <a href="donggyun.html"> -->
-			<p class="p-long">Dr. Donggyun Ku</u> (Visiting Scholar)</p></a>  
-			<!-- <h4 class="p-long">#Transport Planning #Optimisation</h4> -->
-			<br>
-			<!-- <a href="enjia.html"> -->
-			<p class="p-long">Dr. Enjia Zhang</u> (Visiting Scholar)</p></a>  
-			<!-- <h4 class="p-long">#Urban Analytics #Urban Planning</h4> -->
-			<br>
-			<!-- <a href="chengcheng.html"> -->
-			<p class="p-long">Chengcheng Liu</u> (Visiting Scholar)</p></a>  
-			<!-- <h4 class="p-long">#Travel Behavior #Transport Planning</h4>  -->
-			<br></div>
+				<!-- <summary><h2>Alumni</h2></summary> -->
+				<div class="div-c">
+				<!-- <a href="qiancheng.html"> -->
+				<p class="p-long">Qiancheng Wang</u> (PhD Student)</p></a>    
+				<!-- <h4 class="p-long">#Transport #Mobility</h4> -->
+				<br>
+				<!-- <a href="shantong.html"> -->
+				<p class="p-long">Shantong Wang</u> (PhD Student)</p></a>     
+				<!-- <h4 class="p-long">#Transport #Mobility</h4> -->
+				<br>
+				<!-- <a href="zihao.html"> -->
+				<p class="p-long">Dr. Zihao An</u> (Research Associate)</p></a>     
+				<!-- <h4 class="p-long">#Transport #Mobility</h4> -->
+				<br></div>
 
-			<div class="div-d">
-			<!-- <a href="shanyu.html"> -->
-			<p class="p-long">Shan Yu</u> (MPhil)</p></a>  
-			<!-- <h4 class="p-long">#Land Finance #Urban Landscape</h4> -->
-			<br>
-			<!-- <a href="zengquan.html"> -->
-			<p class="p-long">Zengquan Li</u> (MPhil)</p></a>    
-			<!-- <h4 class="p-long">#Geographer #Remote Sensing</h4> -->
-			<br></div>
+				<div class="div-m">
+				<!-- <a href="donggyun.html"> -->
+				<p class="p-long">Dr. Donggyun Ku</u> (Visiting Scholar)</p></a>  
+				<!-- <h4 class="p-long">#Transport Planning #Optimisation</h4> -->
+				<br>
+				<!-- <a href="enjia.html"> -->
+				<p class="p-long">Enjia Zhang</u> (Visiting Scholar)</p></a>  
+				<!-- <h4 class="p-long">#Urban Analytics #Urban Planning</h4> -->
+				<br>
+				<!-- <a href="chengcheng.html"> -->
+				<p class="p-long">Chengcheng Liu</u> (Visiting Scholar)</p></a>  
+				<!-- <h4 class="p-long">#Travel Behavior #Transport Planning</h4>  -->
+				<br></div>
 
+				<div class="div-d">
+				<!-- <a href="shanyu.html"> -->
+				<p class="p-long">Shan Yu</u> (MPhil Student)</p></a>  
+				<!-- <h4 class="p-long">#Land Finance #Urban Landscape</h4> -->
+				<br>
+				<!-- <a href="zengquan.html"> -->
+				<p class="p-long">Zengquan Li</u> (MPhil Student)</p></a>    
+				<!-- <h4 class="p-long">#Geographer #Remote Sensing</h4> -->
+				<br></div>
+			</details>
 
+			<style>
+			.alumni-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
 
+			cursor: pointer;
+			list-style: none;
+
+			font-size: 48px;
+			font-weight: 300;
+			color: #666;
+			}
+
+			/* remove default browser arrow */
+			.alumni-toggle::-webkit-details-marker {
+			display: none;
+			}
+
+			/* custom V arrow */
+			.icon {
+			width: 14px;
+			height: 14px;
+
+			border-right: 3px solid #333;
+			border-bottom: 3px solid #333;
+
+			transform: rotate(45deg);
+			transition: transform 0.2s ease;
+			/* margin-top: -8px; */
+
+			position: relative;
+  			top: -25px;   /* move upward */
+			}
+
+			/* rotate when opened */
+			details[open] .icon {
+			transform: rotate(225deg);
+			margin-top: 8px;
+			}
+
+			.content {
+			margin-top: 30px;
+			}
+			</style>
 
 		</div>
 	</section>
